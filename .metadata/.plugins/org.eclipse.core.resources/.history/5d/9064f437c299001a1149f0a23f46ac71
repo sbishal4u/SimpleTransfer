@@ -1,0 +1,16 @@
+package com.simpleTransfer.qa.pages;
+
+import com.simpleTransfer.qa.helper.Excel_reader;
+
+public class DragAndDrop 
+{
+	Excel_reader excel;
+	
+	public void DragnDrop()
+	{
+		
+	}
+	
+	
+
+}

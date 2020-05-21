@@ -1,0 +1,13 @@
+package com.simpleTransfer.qa.pages;
+
+public class DragAndDrop 
+{
+	public void DragnDrop()
+	{
+		
+	}
+	
+	
+	
+
+}

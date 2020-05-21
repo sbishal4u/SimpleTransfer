@@ -1,0 +1,22 @@
+package com.simpleTransfer.qa.helper;
+
+public class ReadNecData 
+{
+	String excelPath=System.getProperty("user.dir")+"\\TestData\\TestData.xlsx";
+	ExcelReader excel;
+	
+	public void ReadNecData()
+	{
+		excel= new ExcelReader(excelPath);
+		int rCount=excel.getRowCount(1);
+		System.out.println(rCount);
+		
+		for(int i=0;i<=rCount;i++)
+		{
+			String data=excel.getCellDatas(1, i, "TransfastBank");
+			System.out.println(data);
+		}
+		
+	}
+
+}

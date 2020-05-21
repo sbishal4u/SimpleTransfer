@@ -1,0 +1,17 @@
+package com.simpleTransfer.qa.pages;
+
+import com.simpleTransfer.qa.helper.Excel_reader;
+
+public class DragAndDrop 
+{
+	Excel_reader excel;
+	String excelPath=System.getProperty("user.dir")+"\\TestData\\TestData.xlsx";
+	
+	public void DragnDrop()
+	{
+		String sheetName = "TransfastBank";
+	}
+	
+	
+
+}

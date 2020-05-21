@@ -1,0 +1,17 @@
+package com.simpleTransfer.qa.helper;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelReader 
+{
+	XSSFWorkbook wb;
+	XSSFSheet Mysheet;
+	XSSFRow row;
+	XSSFCell cell;
+	XSSFSheet sh=null;
+
+
+}

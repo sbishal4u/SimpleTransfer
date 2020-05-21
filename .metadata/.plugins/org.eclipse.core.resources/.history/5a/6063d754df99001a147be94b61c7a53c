@@ -1,0 +1,25 @@
+package com.simpleTransfer.qa.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.simpleTransfer.qa.helper.ReadTransfastBankData;
+
+public class DragAndDrop 
+{
+	WebDriver driver;
+	public void DragnDrop()
+	{
+		ReadTransfastBankData b=new ReadTransfastBankData();
+		String excelData=b.ReadTransfastBank();
+		
+		//Element which needs to drag.    		
+    	WebElement From=driver.findElement(By.xpath("//ul[@id='sortable2']//span[contains(text(), '"+excelData+"')]"));
+		
+	}
+	
+	
+	
+
+}

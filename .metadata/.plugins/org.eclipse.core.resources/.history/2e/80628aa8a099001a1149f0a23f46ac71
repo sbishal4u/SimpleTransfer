@@ -1,0 +1,15 @@
+package com.simpleTransfer.qa.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class WebTableData 
+{
+	WebDriver driver;
+	public WebTableData(WebDriver driver)
+	{
+		this.driver=driver;
+		PageFactory.initElements(driver, this);	
+	}
+
+}

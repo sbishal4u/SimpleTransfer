@@ -1,0 +1,70 @@
+package com.simpleTransfer.qa.TesrCase;
+
+import java.io.IOException;
+
+import org.junit.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.simpleTransfer.qa.TestBase.TestBase;
+import com.simpleTransfer.qa.pages.DragAndDrop;
+import com.simpleTransfer.qa.pages.LoginPage;
+
+public class LoginPageTest extends TestBase
+{
+	LoginPage loginpage;
+	DragAndDrop drag;
+	
+	@BeforeClass
+	public void LaunchBrowser() throws IOException
+	{
+		loadPropertiesFile();
+		getBrowser(OR.getProperty("Browser"));
+		loginpage=new LoginPage(driver);
+	}
+	
+	@Test(priority=1)
+	public void getLoginTest() throws InterruptedException
+	{
+		loginpage.GetLogin(OR.getProperty("user_name"), OR.getProperty("pass_wd"));
+	}
+	
+	@Test(priority=2)
+	public void clickCorrespondant() throws InterruptedException
+	{
+		loginpage.clickCorrespondant();
+	}
+	
+	@Test(priority=3)
+	public void clickBankMapTest()
+	{
+		loginpage.clickBankMap();
+	}
+	
+	@Test(priority=4)
+	public void getValuefromDropDwonTest() throws InterruptedException
+	{
+		loginpage.getValuefromDropDwon();
+		/*Thread.sleep(2000);
+		loginpage.getTableData();
+		Thread.sleep(3000);*/
+	}
+	
+	@Test(priority=4)
+	public void DragWebElementTest()
+	{
+		
+	}
+	
+	@AfterClass
+	public void CloseBrowser() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		driver.quit();
+	}
+	
+	
+	
+	
+
+}

@@ -1,0 +1,16 @@
+package com.simpleTransfer.qa.pages;
+
+import org.openqa.selenium.WebDriver;
+
+public class DragAndDrop 
+{
+	WebDriver driver;
+	public void DragnDrop()
+	{
+		
+	}
+	
+	
+	
+
+}

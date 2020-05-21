@@ -1,0 +1,31 @@
+package com.simpleTransfer.qa.helper;
+
+public class ReadTransfastBankData
+{
+	String excelPath=System.getProperty("user.dir")+"\\TestData\\TestData.xlsx";
+	ExcelReader excel;
+	
+	
+	public void ReadTransfastBank()
+	{
+		excel= new ExcelReader(excelPath);
+		int rCount=excel.getRowCount(0);
+		System.out.println(rCount);
+		
+		for(int i=0;i<=rCount;i++)
+		{
+			String data=excel.getCellDatas(0, rCount, "TransfastBank");
+			System.out.println(data);
+		}
+		
+		
+	}
+	
+	public static void main(String[] args) 
+	{
+		ReadTransfastBankData tr=new ReadTransfastBankData();
+		tr.ReadTransfastBank();
+	}
+	
+	
+}

@@ -1,0 +1,7 @@
+Browser=firefox
+url=http://13.71.162.88:8090/st/adminuser/login.html
+user_name=kishan@vesuviois.com
+pass_wd=Abcd1#
+PageLoadTimeOut=240
+ImplcitWait=20
+ExplicitWait=60

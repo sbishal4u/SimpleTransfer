@@ -1,0 +1,7 @@
+package com.simpleTransfer.qa.helper;
+
+public class ReadTransfastBankData
+{
+	String excelPath=System.getProperty("user.dir")+"\\TestData\\TestData.xlsx";
+	
+}

@@ -1,0 +1,48 @@
+package com.simpleTransfer.qa.pages;
+
+import com.simpleTransfer.qa.helper.ExcelReader;
+
+public class DragAndDrop 
+{
+	ExcelReader excel;
+	
+	public void DragnDrop()
+	{
+		String excelPath=System.getProperty("user.dir")+"\\TestData\\TestData.xlsx";
+		excel=new ExcelReader(excelPath);
+		int rowCnt=excel.getRowCount(0);
+		System.out.println("Row Count="+rowCnt);
+
+		for(int i=1;i<=rowCnt;i++)
+		{
+			String excelData=excel.getCellData(0, i, "TransfastBank");
+			System.out.println("Data of Transfast Bank="+excelData);
+		}
+		
+	}
+	
+	public void DragnDrop1()
+	{
+		System.out.println("*****************************************************");
+		int rowCount=excel.getRowCount(1);
+		System.out.println("Row Count of NEC Bank="+rowCount);
+		
+		for(int i=1;i<rowCount;i++)
+		{
+			String excelData1=excel.getCellData(1, rowCount, "NECBank");
+			
+			System.out.println("Data from NEC Bank="+excelData1);
+		}
+		
+	}
+	
+	public static void main(String[] args) 
+	{
+		DragAndDrop drag=new DragAndDrop();
+		drag.DragnDrop();
+		
+	}
+	
+	
+
+}

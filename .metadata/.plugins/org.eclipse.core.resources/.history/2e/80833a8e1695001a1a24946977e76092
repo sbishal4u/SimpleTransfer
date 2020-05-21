@@ -1,0 +1,44 @@
+package com.simpleTransfer.qa.TesrCase;
+
+import java.io.IOException;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.simpleTransfer.qa.TestBase.TestBase;
+import com.simpleTransfer.qa.pages.LoginPage;
+
+public class LoginPageTest extends TestBase
+{
+	LoginPage loginpage;
+	
+	@BeforeClass
+	public void LaunchBrowser() throws IOException
+	{
+		loadPropertiesFile();
+		getBrowser(OR.getProperty("Browser"));
+		loginpage=new LoginPage(driver);
+	}
+	
+	@Test(priority=1)
+	public void getLoginTest() throws InterruptedException
+	{
+		loginpage.GetLogin(OR.getProperty("user_name"), OR.getProperty("pass_wd"));
+	}
+	
+	@Test(priority=2)
+	public void clickCorrespondant() throws InterruptedException
+	{
+		loginpage.clickCorrespondant();
+	}
+	
+	public void clickBankMapTest()
+	{
+		loginpage.clickBankMap();
+	}
+	
+	
+	
+	
+
+}

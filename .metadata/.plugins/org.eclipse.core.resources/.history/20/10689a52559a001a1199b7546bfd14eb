@@ -1,0 +1,15 @@
+package com.simpleTransfer.qa.helper;
+
+public class ReadDataValue 
+{
+	String excelPath=System.getProperty("user.dir")+"\\TestData\\TestData.xlsx";
+	ExcelReader excel;
+	
+	public String ReadDataValue()
+	{
+		excel=new ExcelReader(excelPath);
+		int rCount=excel.getRowCount(2);
+	}
+	
+
+}
